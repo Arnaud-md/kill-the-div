@@ -1,4 +1,4 @@
-export default function Timer(props) {
+export default function Timer(props: {time: number}) {
     return (
       <div className="timer">
         <span className="digits">

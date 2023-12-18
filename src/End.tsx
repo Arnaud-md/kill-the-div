@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const End = () => {
     const navigate = useNavigate();
     const handleClickReplay = useCallback(async()=> {

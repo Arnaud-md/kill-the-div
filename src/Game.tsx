@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const son=new Audio("/short-success-sound-glockenspiel-treasure-video-game-6346.mp3");
 
@@ -7,8 +7,8 @@ const Game = () => {
     const [left,setLeft]=useState(Math.random()*100);
     const [top,setTop]=useState(Math.random()*100);
     const [nbClick,setNbClick]=useState(0);
-    const [intId,setIntId]=useState(0);
-    const [startTime, setStarttime] = useState(Date.now())
+    const [_,setIntId]=useState(0);
+    const [startTime] = useState(Date.now())
 
     const navigate = useNavigate();
 
