@@ -1,7 +1,8 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const End = () => {
     const navigate = useNavigate();
+
     const handleClickReplay = useCallback(async()=> {
         navigate('/game');
     },[]);      

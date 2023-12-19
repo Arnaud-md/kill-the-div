@@ -8,12 +8,14 @@ const Game = () => {
     const [top,setTop]=useState(Math.random()*100);
     const [nbClick,setNbClick]=useState(0);
     const [_,setIntId]=useState(0);
-    const [startTime] = useState(Date.now())
+    const [startTime] = useState(Date.now());
 
     const navigate = useNavigate();
 
+   
+
     useEffect(()=>{
-        setInterval(()=>setIntId(Math.random()),120)
+        setInterval(()=>setIntId(Math.random()),120);
     },[])
 
     const handleClick = useCallback(()=> {
@@ -28,7 +30,12 @@ const Game = () => {
         son.play();
 
         if (nbClick===9) {
-            navigate('/end');
+            Notification.requestPermission().then((permission) => {
+                if (permission === "granted") {
+                  new Notification('coucou', { body: 'toto'})
+                }
+            });
+            // navigate('/end');
         }
     },[nbClick]);
     const handleRegame = useCallback(async()=> {
